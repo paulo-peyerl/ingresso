@@ -20,18 +20,21 @@ function comprar() {
             alert('Quantidade indisponível para Pista!');
             return;
         }
+        alert('Compra realizada com sucesso!');
         quantidadePista.textContent -= quantidadeDeIngressos;
     }else if(tipoIngresso === 'inferior'){
         if(item.quantidade > parseInt(quantidadeInferior.textContent)){
             alert('Quantidade indisponível para a Cadeira Inferior');
             return;
         }
+        alert('Compra realizada com sucesso!');
         quantidadeInferior.textContent -= quantidadeDeIngressos;
     }else if(tipoIngresso === 'superior'){
         if(item.quantidade > parseInt(quantidadeSuperior.textContent)){
             alert('Quantidade indisponível para a Cadeira Superior');
             return;
         }
+        alert('Compra realizada com sucesso!');
         quantidadeSuperior.textContent -= quantidadeDeIngressos;
     }
     document.getElementById('qtd').value = '';
