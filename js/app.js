@@ -18,7 +18,7 @@ function comprar() {
     if(tipoIngresso === 'pista'){
         if(item.quantidade > parseInt(quantidadePista.textContent)){
             alert('Quantidade indisponível para Pista!');
-            return
+            return;
         }
         quantidadePista.textContent -= quantidadeDeIngressos;
     }else if(tipoIngresso === 'inferior'){
@@ -30,9 +30,9 @@ function comprar() {
     }else if(tipoIngresso === 'superior'){
         if(item.quantidade > parseInt(quantidadeSuperior.textContent)){
             alert('Quantidade indisponível para a Cadeira Superior');
+            return;
         }
         quantidadeSuperior.textContent -= quantidadeDeIngressos;
-        return; 
     }
     document.getElementById('qtd').value = '';
 }
