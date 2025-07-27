@@ -1,5 +1,3 @@
-let carrinho = [];
-
 function comprar() {
     let tipoIngresso = document.getElementById('tipo-ingresso').value;
     let quantidadeDeIngressos = document.getElementById('qtd').value;
@@ -36,5 +34,5 @@ function comprar() {
         quantidadeSuperior.textContent -= quantidadeDeIngressos;
         return; 
     }
-    carrinho.push(item);
+    document.getElementById('qtd').value = '';
 }
